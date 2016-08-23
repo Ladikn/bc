@@ -1,0 +1,24 @@
+{
+  "name": "node-site",
+  "version": "0.0.0",
+  "description": "NodeSite",
+  "main": "server.js",
+  "author": {
+    "name": "Ladikn"
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "feed-read": "0.0.1",
+    "jquery": "^3.1.0",
+    "mysql": "^2.11.1",
+    "vash": "^0.12.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-nodemon": "^0.4.2"
+  }
+}

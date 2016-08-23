@@ -1,0 +1,17 @@
+<div id="right-header">
+    <span>Sign In</span></div>
+<div id="right-container">
+    <div class="default-box">
+        <form>
+            <ul class="input-form" style="list-style: none;">
+                <li><label for='name'>User Name</label></li>
+                <li><input type='text' name='name' id='name' ng-model="u.name"></li>
+                <li><label for='password'>Password</label></li>
+                <li><input type='password' name='password' id='password' ng-model="u.password"></li>
+                <li><label>New User?</label>
+                    <input type="checkbox" name='visibility' value='1' id='active' ng-model="u.isnew"><label for='active'></label></li>
+                <li><input type="submit" value="submit" ng-click="submitUser(u)"></li>
+            </ul>
+        </form>
+    </div>
+</div>

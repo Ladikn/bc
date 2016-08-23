@@ -1,0 +1,28 @@
+<md-dialog aria-label="Delete Article">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Delete Article</h2>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <form class="blockchain-form">
+            <ul class="input-form" style="list-style: none;">
+                <li><label>Article Name</label></li>
+                <li>
+                    <select name='parent' id='parent' ng-model="art.key">
+                        <option ng-repeat="article in articles" value="{{article.key}}">{{article.name}}</option>
+                    </select>
+                </li>
+            </ul>
+        </form>
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <md-button ng-click="submitArt()">
+        Submit
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

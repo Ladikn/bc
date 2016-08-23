@@ -1,0 +1,28 @@
+<div id="right-header">
+    <span>New Category</span></div>
+<div id="right-container">
+    <div class="default-box">
+        <form>
+            <ul class="input-form" style="list-style: none;">
+                <li><label for='name'>Category Name</label></li>
+                <li><input type='text' name='name' id='name' ng-model="cat.name"></li>
+                <li><label for='color'>Category Color</label></li>
+                <li><input type='text' name='color' id='color' ng-model="cat.color"></li>
+                <li><label for='parent'>Parent Category</label></li>
+                <li>
+                    <select name='parent' id='parent' ng-model="cat.parent">
+                        <option ng-repeat="category in categories" value="{{category.key}}">{{category.name}}</option>
+                    </select>
+                </li>
+                <li><label for='rss'>RSS feed URL</label></li>
+                <li><input type='text' name='rss' id='rss' ng-model="cat.rss"></li>
+                <li><label>Visiblity</label></li>
+                <li>
+                    <input type="radio" name='visibility' value='1' id='active' ng-model="cat.active"><label for='active'>Active</label>
+                    <input type="radio" name='visibility' value='0' id='inactive' ng-model="cat.active"><label for='inactive'>Inactive</label>
+                </li>
+                <li><input type="submit" value="submit" ng-click="submitCat(cat)"></li>
+            </ul>
+        </form>
+    </div>
+</div>

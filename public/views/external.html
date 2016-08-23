@@ -1,0 +1,15 @@
+<div id="right-header">
+    <span>{{title}}</span>
+</div>
+
+<div id="right-container" style="display: block;">
+	<div class='article-box' ng-repeat="article in articles">
+		<h2>{{article.title | limitTo: 100}}</h2>
+		<p>{{article.content | htmlToPlaintext | limitTo: 135}}...</p>
+		<div class="article-box-footer"><div class="videoIcon"> </div> 
+			<div class="readMore">
+				<a target="_blank" href="{{article.link}}">Read More</a>
+			</div>
+		</div>
+	</div>
+</div>

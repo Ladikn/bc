@@ -1,0 +1,29 @@
+<div id="right-header">
+    <span>Edit Category</span></div>
+<div id="right-container">
+    <div class="default-box">
+        <form>
+            <ul class="input-form" style="list-style: none;">
+                <li><label for='select'>Select a Category</label></li>
+                <li>
+                    <select name='select' id='select' ng-model="current" ng-change="changeCurrentCategory()">
+                        <option ng-repeat="category in categories" value="{{category.key}}">{{category.name}}</option>
+                    </select>
+                </li>
+                <li><label for='name'>Category Name</label></li>
+                <li><input type='text' name='name' id='name' ng-model="cat.name"></li>
+                <li><label for='color'>Category Color</label></li>
+                <li><input type='text' name='color' id='color' ng-model="cat.color"></li>
+                <li><label for='parent'>Parent Category</label></li>
+                <li>
+                    <select name='parent' id='parent' ng-model="cat.parent">
+                        <option ng-repeat="category in categories" value="{{category.key}}">{{category.name}}</option>
+                    </select>
+                </li>
+                <li><label for='rss'>RSS feed URL</label></li>
+                <li><input type='text' name='rss' id='rss' ng-model="cat.rss"></li>
+                <li><input type="submit" value="submit" ng-click="submitCat(cat)"></li>
+            </ul>
+        </form>
+    </div>
+</div>

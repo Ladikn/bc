@@ -1,0 +1,17 @@
+<div id="right-header">
+    <span>Delete Category</span></div>
+<div id="right-container">
+    <div class="default-box">
+        <form>
+            <ul class="input-form" style="list-style: none;">
+                <li><label>Category Name</label></li>
+                <li>
+                    <select name='parent' id='parent' ng-model="cat.key">
+                        <option ng-repeat="category in categories" value="{{category.key}}">{{category.name}}</option>
+                    </select>
+                </li>
+                <li><input type="submit" value="submit" ng-click="submitCat(cat)"></li>
+            </ul>
+        </form>
+    </div>
+</div>

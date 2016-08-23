@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>NodeSite</Name>
+    <RootNamespace>NodeSite</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>2c421b77-52d8-4271-b7f9-ef1adb8d0b6f</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>server.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ProjectFiles</ProjectView>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="controllers\home.js" />
+    <Compile Include="controllers\index.js" />
+    <Compile Include="gruntfile.js" />
+    <Compile Include="public\articles.js" />
+    <Compile Include="public\js\bootstrap.js" />
+    <Compile Include="public\js\bootstrap.min.js" />
+    <Compile Include="public\js\d3.v3.min.js" />
+    <Compile Include="public\js\jquery-1.7.2.min.js" />
+    <Compile Include="public\js\jquery-1.9.1.intellisense.js" />
+    <Compile Include="public\js\jquery-1.9.1.js" />
+    <Compile Include="public\js\jquery-1.9.1.min.js" />
+    <Compile Include="public\js\jquery.modal.min.js" />
+    <Compile Include="public\js\script.js" />
+    <Compile Include="server.js" />
+    <Compile Include="views\SynBlockchainSVN\articles.js" />
+    <Compile Include="views\SynBlockchainSVN\codegraveyard.js" />
+    <Compile Include="views\SynBlockchainSVN\js\bootstrap.js" />
+    <Compile Include="views\SynBlockchainSVN\js\bootstrap.min.js" />
+    <Compile Include="views\SynBlockchainSVN\js\d3.v3.min.js" />
+    <Compile Include="views\SynBlockchainSVN\js\jquery-1.7.2.min.js" />
+    <Compile Include="views\SynBlockchainSVN\js\jquery-1.9.1.intellisense.js" />
+    <Compile Include="views\SynBlockchainSVN\js\jquery-1.9.1.js" />
+    <Compile Include="views\SynBlockchainSVN\js\jquery-1.9.1.min.js" />
+    <Compile Include="views\SynBlockchainSVN\js\jquery.modal.min.js" />
+    <Compile Include="views\SynBlockchainSVN\js\script.js" />
+    <Compile Include="views\SynBlockchainSVN\test.js" />
+    <Content Include="bower.json" />
+    <Content Include="package.json" />
+    <Content Include="public\css\bootstrap-rtl.css" />
+    <Content Include="public\css\bootstrap-rtl.min.css" />
+    <Content Include="public\css\bootstrap-theme.css" />
+    <Content Include="public\css\bootstrap-theme.css.map" />
+    <Content Include="public\css\bootstrap-theme.min.css" />
+    <Content Include="public\css\bootstrap-theme.min.css.map" />
+    <Content Include="public\css\bootstrap.css" />
+    <Content Include="public\css\bootstrap.css.map" />
+    <Content Include="public\css\bootstrap.min.css" />
+    <Content Include="public\css\bootstrap.min.css.map" />
+    <Content Include="public\css\global.css" />
+    <Content Include="public\css\jquery.modal.css" />
+    <Content Include="public\css\plugins\morris.css" />
+    <Content Include="public\css\sb-admin-rtl.css" />
+    <Content Include="public\css\sb-admin.css" />
+    <Content Include="public\css\style.css" />
+    <Content Include="public\css\style.min.css" />
+    <Content Include="public\css\style.scss" />
+    <Content Include="public\data.json" />
+    <Content Include="public\font-awesome\css\font-awesome.css" />
+    <Content Include="public\font-awesome\css\font-awesome.min.css" />
+    <Content Include="public\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="public\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="public\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="public\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="public\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="public\font-awesome\less\bordered-pulled.less" />
+    <Content Include="public\font-awesome\less\core.less" />
+    <Content Include="public\font-awesome\less\fixed-width.less" />
+    <Content Include="public\font-awesome\less\font-awesome.less" />
+    <Content Include="public\font-awesome\less\icons.less" />
+    <Content Include="public\font-awesome\less\larger.less" />
+    <Content Include="public\font-awesome\less\list.less" />
+    <Content Include="public\font-awesome\less\mixins.less" />
+    <Content Include="public\font-awesome\less\path.less" />
+    <Content Include="public\font-awesome\less\rotated-flipped.less" />
+    <Content Include="public\font-awesome\less\spinning.less" />
+    <Content Include="public\font-awesome\less\stacked.less" />
+    <Content Include="public\font-awesome\less\variables.less" />
+    <Content Include="public\font-awesome\scss\font-awesome.scss" />
+    <Content Include="public\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="public\font-awesome\scss\_core.scss" />
+    <Content Include="public\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="public\font-awesome\scss\_icons.scss" />
+    <Content Include="public\font-awesome\scss\_larger.scss" />
+    <Content Include="public\font-awesome\scss\_list.scss" />
+    <Content Include="public\font-awesome\scss\_mixins.scss" />
+    <Content Include="public\font-awesome\scss\_path.scss" />
+    <Content Include="public\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="public\font-awesome\scss\_spinning.scss" />
+    <Content Include="public\font-awesome\scss\_stacked.scss" />
+    <Content Include="public\font-awesome\scss\_variables.scss" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="public\images\blockchain.png" />
+    <Content Include="public\images\favicon.ico" />
+    <Content Include="public\images\Jlubin.png" />
+    <Content Include="public\images\logo-symbol.png" />
+    <Content Include="public\images\logo.png" />
+    <Content Include="public\images\synelogo.png" />
+    <Content Include="public\images\video-icon.png" />
+    <Content Include="public\images\view-icon.png" />
+    <Content Include="public\js\jquery-1.9.1.min.map" />
+    <Content Include="README.md" />
+    <Content Include="views\index.html" />
+    <Content Include="views\SynBlockchainSVN\.svn\entries" />
+    <Content Include="views\SynBlockchainSVN\.svn\format" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\04\0469b430cd1567145ba800b22537588be2d1934d.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\09\0923a8ef62684018c751d9585d3031ba0fd1b8ce.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\09\09724054b2b79748b794e93ad218b024995416e3.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\0e\0e9208227ef1cbbd2b95844acd18d0d70b93cd23.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\0e\0ea868b1bf642c791c4e3ebe90f008ba20b671e7.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\0f\0f35daff42ae1cee71275579f37887e30bb4483f.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\14\1468254bdfd4712c9f496b8f521225362a17ed95.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\1c\1c72e0023564e64f0aef72bd4358d062378555fa.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\1d\1d4137d163dcc25da94e7d09b4a8e8649438314b.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\1d\1d87ffec2759876dff19099f6c324248315268eb.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\1f\1f96246df039586854bd06cff9285cc5ab2b806a.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\1f\1f9cd6f63c0a80b13f426cb7d8f7a086333677d4.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\21\213966e6d3b35f564a6e7a8c14d5e9e90b0bd835.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\21\213ad223656ecb7ca4998269da6cab2266b70884.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\21\215c9314f31523bf1f37a8a77aa64eac161c1ee2.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\22\22113042c37dea9ffb716ebed144190b996ce649.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\22\224417ca266c657849afb2bbcb6dc455894ff387.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\22\227bc691956da0750685cafe4531e141bc7a18c5.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\22\22bce64316eb1b590fd60558e0b6edaeb23066b1.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\23\233140010cdd387ac5f3c819cfb8f280f0d79c15.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\24\2448d7306f83ce4481060788411ea4b72609c2e4.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\27\278e49a86e634da6f2a02f3b47dd9d2a8f26210f.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\2c\2c6d9b536481ee7a20fbb376c75b3d1eefeeec0c.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\32\3235bef233da749b5a42b351eab1e7097fc895ce.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\33\335818f57de4a2c5f8d33a394741ecab003152a6.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\36\36c8c8c46f2ff3bede0fbb7888120b44fc9e036e.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\37\373bfff89f0d59321b02d3e1ed10103f3985b1dd.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\37\37bee79eabb74a160d0d3c4aac28bbc0b56e68b6.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\39\39ec957022b6d578c4e81f20e0e0a779113cc8a7.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\3b\3b965a36a6b08854ad6eddedf85c5319fd392b4a.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\3c\3c7a8ead7af56c3333cc2d0eb6d046ab8e486f4c.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\3d\3de38bf06d5fd8382e43c28b0d2b1b99a142e6f2.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\40\40038b807c6ef5f2dbb70912f808542578c47221.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\43\43035523d1bcea3e61a4f62587938078d7e1120a.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\43\430a443d74830fe9be26efca431f448c1b3740f9.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\44\44bc1850f570972267b169ae18f1cb06b611ffa2.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\47\479e4848591d7904c378c1f1bf3c2739063cd0a2.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\47\47b20ed9ae2cc3de2d719ed3c5da26cd090e7a96.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\4b\4b53ee01513df8b9ce76442b2d8f1851613a435c.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\4c\4cbd2b9a5742b136af8cec0e8dceff88b81d45a3.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\5b\5b1fdfb2666d478d5b4911c7bbd49edbf1b47fb1.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\5c\5c2f241feac2b483990f4991083bf496843cf290.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\5f\5f61b20020b332c8bc6fe00803b4e3b632ea526f.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\61\61e00e28204d312a8d961f118aabe6101852982a.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\62\6225ccc4ec94d060f19efab97ca42d842845b949.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\62\6270a4a561a69fef5f5cc18cdf9efc256ec2ccbe.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\65\6527d8bf3e1e9368bab8c7b60f56bc01fa3afd68.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\66\66d64182223f219090d9d4f5b9c9a7cf3cc76445.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\67\671820562a9b33ff158635aa4e1fde4ff190ba7e.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\67\674c17413159e7cf25f3bbf28ebfa144f0359119.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\67\675189a709e2334f5d1a321d18779f8a2ba5136e.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\6c\6c630c12184358b281aa25cc8e193e9818888d1e.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\6d\6df51eee1e75e450cb9cd71e925e6aa9ac2d6a9d.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\73\733a7968914546bd8d20fa25e8fd5136b74f342c.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\76\76f8e9931398e15d993205ca52ca5430c37453fd.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\78\78a9fab860418a350da57bc4982c85c99d536126.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\7a\7aef91ef45146e6b0602f9ea14be5b6cd7cbfcdf.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\7d\7d65e0227d0d7cdc1718119cd2a7dce0638f151c.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\7e\7e635bac48f9d8bbe82a87afbc3f9d26a9604e1a.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\80\80ab9b9ac6d4b81fd8b0918e17f7bf36fc83f335.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\82\8256575374f430476bdcd49de98c77990229ce31.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\85\853b31b6ceae518c6b8530d062859a02dc861845.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\85\859a19c4d8c38bbed8f5ec3dd8498c0645cddbc0.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\86\86243ffa6d3e421b5a7ad797c48cf41c2caa1ed6.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\86\866a92b5553c597cdd760b292efa1326e46a1a37.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\86\86b6f62b7853e67d3e635f6512a5a5efc58ea3c3.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\87\87f7dfd79d77051ac2eca7d093d961fbd1c8f6eb.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\8f\8fd98925c4ebf38fe45d7767755db1a12ab94907.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\91\91c006d9986d194525aa6e43a0228eb4556519f4.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\94\940e1c5ebc690283bfaee92560cf15fabedbf6a9.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\95\95de5de9009714692430b04f9cd4388be8fba8f3.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\98\98c5019c6a61dfd105d7d52c889843d8aa4d9418.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\99\99a38684ef2765b3e585420b71c695fc37baa751.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\9d\9d9ec3831c049a15dd77e57f1bf6f7b3cdcdd0e8.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\9f\9f6715f510c01884d7f72025bfad4c434198e20c.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\a1\a16081829c7f9d6b2e027a610f0d44a8d382dadc.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\a2\a2aa9e160648970336a6519e428372e59faa95d7.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\a2\a2e1c7c2df1f9d3adaf45601ab268e58ae222032.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\a4\a4797a3bde4ae2c2dd62b71ebea2817a17cd693c.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\a7\a76ccbec62912e691e92d69c4da8bc68d29ec72c.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\ab\abd3d81157ece4c4963d1b51f638430491e5d505.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\ad\ad9a1c344e2ed8e1c65c5e7d3c78f256c85a116b.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\af\afd786fbe195130cfb350e3d74e6a15723f5b2d2.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\b4\b49a7e80663f27a78780e117b5470d19814f2037.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\b4\b4ee5c0864b40b37201647ee7f224f01f6eb9b14.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\b7\b71d1c7c315b67c614563382d1c2a868ac14d729.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\ba\ba6580c092458a50d15140b5601c3ea1231726bd.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\bb\bb562df8d04b5d74919bf66697bece0d5819d170.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\be\bef0e735146bc691a2c681e164314e653d728f15.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\c0\c08917fcd07e34c8f917ac9e229532132cdae70a.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\c2\c24ab7eaa77e8c018d1aa960c9fcae0c3eb98c96.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\c3\c351eb88d7d514a58b8f214e40104e971d1078fa.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\c9\c9233fac71f25b03e16e11f18e280b0d6e3f0cf5.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\ca\ca08a0af3da63c2f2a7d3c27a8747637744cc785.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\ca\ca35b697d99cae4d1b60f2d60fcd37771987eb07.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\ca\ca50d917657a1631d58ce0c791604760d5532d12.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\cb\cb68b7aff86af32feeaaacc6d3a77e79bbd085a3.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\cd\cd980eab6db5fa57db670cb2e4278e67e1a4d6c9.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\cf\cf6752ee609af36eb293a7197c88d31ecacbbc74.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\d2\d24e1f04a60c5b7bc4b007fecedfc85ffb2f4f8c.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\d3\d3abba53f3750327f77066db2868de01382ce86b.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\d6\d685d0ac6b386830865fa58a00895a89ebf5d427.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\d6\d6f70216d2a0b6a869c98c36ab85cb3efc414bbd.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\db\db081bbc7d2660e8679f775c5a627984a50d84f9.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\db\db19fb6462e27b8cbf50efd0abf38634a5ab6447.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\db\db6a207c6872febb3aa89987cfe78266f0c55d65.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\db\db761b7f78a94d96fe708760c3367b4a93ddfc1e.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\dc\dc5d2ff38a255cec988f00297a93dd0da1dd3599.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\de\de51a8494180a6db074af2dee2383f0a363c5b08.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\df\df1db96794c1fda2fb32f574d51b592bdb0616f6.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\e0\e0d7b2bde55a0bac1b658a507e8ca491a6729e06.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\e1\e152f9ef54b29bad851af8c6f8a77335a6e2c3f5.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\e3\e31d2a61dcf7da07e9730e0dd9a198c94be36326.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\e3\e373e7848ed627eade944bb8f122072da8407b62.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\e3\e3c70710695541441c685d1b1744022bf1033207.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\e4\e425480b8ff57ff1a6e78f5713ed6d6c78ae7499.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\e4\e4c2ca449da21f9b1f5e88d731df8f3069c8fb7c.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\e4\e4c45d6f0dc22be4d9c646351e47b0e0adf09e8a.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\e5\e5680f447ef63491a959f494b90659bfea1b6270.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\e5\e5ace224e19cb5bc99076e525dfa832f344178ea.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\e6\e64ad4c6e7fcca35114e6a40ea124b706b9ac940.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\e7\e7033412f3f1abad02b94f18937e6a51fe1d5d94.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\e7\e7119e82dc50540dbc3472bba7d74282815a7ecc.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\e7\e79168c54a9d1c1732bea399ead2c1b8f5489782.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\e8\e844dc06720555deddd0b630873570d14a228f4a.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\ea\eaf92d66eeccc752d8567ffd8d6a5ee591b6c6fd.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\ec\ec0c24b97184dab86177660f486b8d08cd636c42.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\ed\ed5ff46ea16ab6b9dac9162d25af840ba96e625a.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\ed\edb682577d8abe85f58e99241cbc510ac00fd15b.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\ee\eece8a22a8feedb3379c34bb5ed0f78e617ffa33.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\ef\ef2a4af8e10372fe5c55d31c94650fc9fc3a26d2.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\f0\f044077bc8be1a989c245254e81eb084d52d29a7.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\f2\f2cb029f6cce4d5d056a994cda6b89a8c14cf73f.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\f5\f53bc20884a1410d950b4a36a330c5181a8b55ab.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\f5\f597f59f955cda06e5d7a79342d9e0c22b5ec6d2.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\pristine\fa\faec0ae84e051fe8e9049721a410a63b4e8b37d6.svn-base" />
+    <Content Include="views\SynBlockchainSVN\.svn\wc.db" />
+    <Content Include="views\SynBlockchainSVN\.svn\wc.db-journal" />
+    <Content Include="views\SynBlockchainSVN\.vs\config\applicationhost.config" />
+    <Content Include="views\SynBlockchainSVN\.vs\SynBlockchainSVN\v14\.suo" />
+    <Content Include="views\SynBlockchainSVN\css\bootstrap-rtl.css" />
+    <Content Include="views\SynBlockchainSVN\css\bootstrap-rtl.min.css" />
+    <Content Include="views\SynBlockchainSVN\css\bootstrap-theme.css" />
+    <Content Include="views\SynBlockchainSVN\css\bootstrap-theme.css.map" />
+    <Content Include="views\SynBlockchainSVN\css\bootstrap-theme.min.css" />
+    <Content Include="views\SynBlockchainSVN\css\bootstrap-theme.min.css.map" />
+    <Content Include="views\SynBlockchainSVN\css\bootstrap.css" />
+    <Content Include="views\SynBlockchainSVN\css\bootstrap.css.map" />
+    <Content Include="views\SynBlockchainSVN\css\bootstrap.min.css" />
+    <Content Include="views\SynBlockchainSVN\css\bootstrap.min.css.map" />
+    <Content Include="views\SynBlockchainSVN\css\global.css" />
+    <Content Include="views\SynBlockchainSVN\css\jquery.modal.css" />
+    <Content Include="views\SynBlockchainSVN\css\plugins\morris.css" />
+    <Content Include="views\SynBlockchainSVN\css\sb-admin-rtl.css" />
+    <Content Include="views\SynBlockchainSVN\css\sb-admin.css" />
+    <Content Include="views\SynBlockchainSVN\css\style.css" />
+    <Content Include="views\SynBlockchainSVN\css\style.min.css" />
+    <Content Include="views\SynBlockchainSVN\css\style.scss" />
+    <Content Include="views\SynBlockchainSVN\data.json" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\css\font-awesome.css" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\css\font-awesome.min.css" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\less\bordered-pulled.less" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\less\core.less" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\less\fixed-width.less" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\less\font-awesome.less" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\less\icons.less" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\less\larger.less" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\less\list.less" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\less\mixins.less" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\less\path.less" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\less\rotated-flipped.less" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\less\spinning.less" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\less\stacked.less" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\less\variables.less" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\scss\font-awesome.scss" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\scss\_core.scss" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\scss\_icons.scss" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\scss\_larger.scss" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\scss\_list.scss" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\scss\_mixins.scss" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\scss\_path.scss" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\scss\_spinning.scss" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\scss\_stacked.scss" />
+    <Content Include="views\SynBlockchainSVN\font-awesome\scss\_variables.scss" />
+    <Content Include="views\SynBlockchainSVN\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="views\SynBlockchainSVN\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="views\SynBlockchainSVN\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="views\SynBlockchainSVN\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="views\SynBlockchainSVN\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="views\SynBlockchainSVN\images\blockchain.png" />
+    <Content Include="views\SynBlockchainSVN\images\favicon.ico" />
+    <Content Include="views\SynBlockchainSVN\images\Jlubin.png" />
+    <Content Include="views\SynBlockchainSVN\images\logo-symbol.png" />
+    <Content Include="views\SynBlockchainSVN\images\logo.png" />
+    <Content Include="views\SynBlockchainSVN\images\synelogo.png" />
+    <Content Include="views\SynBlockchainSVN\images\video-icon.png" />
+    <Content Include="views\SynBlockchainSVN\images\view-icon.png" />
+    <Content Include="views\SynBlockchainSVN\Index-old.html" />
+    <Content Include="views\SynBlockchainSVN\index.html" />
+    <Content Include="views\SynBlockchainSVN\js\jquery-1.9.1.min.map" />
+    <Content Include="views\SynBlockchainSVN\SynBlockchainSVN.sln" />
+    <Content Include="views\SynBlockchainSVN\Web.config" />
+    <Content Include="views\SynBlockchainSVN\WebWorkbench.mswwsettings" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="controllers\" />
+    <Folder Include="public\" />
+    <Folder Include="public\css\" />
+    <Folder Include="public\css\plugins\" />
+    <Folder Include="public\font-awesome\" />
+    <Folder Include="public\font-awesome\css\" />
+    <Folder Include="public\font-awesome\fonts\" />
+    <Folder Include="public\font-awesome\less\" />
+    <Folder Include="public\font-awesome\scss\" />
+    <Folder Include="public\fonts\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\js\" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\globals\" />
+    <Folder Include="typings\globals\angular-route\" />
+    <Folder Include="typings\globals\angular-ui-router\" />
+    <Folder Include="typings\globals\angular\" />
+    <Folder Include="typings\globals\debug\" />
+    <Folder Include="typings\globals\ejs\" />
+    <Folder Include="typings\globals\inherits\" />
+    <Folder Include="typings\globals\jade\" />
+    <Folder Include="typings\globals\jquery\" />
+    <Folder Include="typings\globals\ms\" />
+    <Folder Include="typings\globals\mysql\" />
+    <Folder Include="typings\globals\node-sass\" />
+    <Folder Include="typings\globals\qs\" />
+    <Folder Include="views\" />
+    <Folder Include="typings\globals\ejs-locals\" />
+    <Folder Include="typings\globals\express\" />
+    <Folder Include="typings\globals\node\" />
+    <Folder Include="views\SynBlockchainSVN\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\04\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\09\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\0e\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\0f\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\14\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\1c\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\1d\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\1f\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\21\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\22\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\23\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\24\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\27\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\2c\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\32\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\33\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\36\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\37\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\39\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\3b\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\3c\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\3d\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\40\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\43\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\44\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\47\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\4b\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\4c\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\5b\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\5c\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\5f\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\61\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\62\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\65\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\66\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\67\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\6c\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\6d\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\73\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\76\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\78\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\7a\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\7d\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\7e\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\80\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\82\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\85\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\86\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\87\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\8f\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\91\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\94\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\95\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\98\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\99\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\9d\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\9f\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\a1\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\a2\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\a4\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\a7\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\ab\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\ad\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\af\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\b4\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\b7\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\ba\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\bb\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\be\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\c0\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\c2\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\c3\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\c9\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\ca\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\cb\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\cd\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\cf\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\d2\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\d3\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\d6\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\db\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\dc\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\de\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\df\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\e0\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\e1\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\e3\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\e4\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\e5\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\e6\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\e7\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\e8\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\ea\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\ec\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\ed\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\ee\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\ef\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\f0\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\f2\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\f5\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\pristine\fa\" />
+    <Folder Include="views\SynBlockchainSVN\.svn\tmp\" />
+    <Folder Include="views\SynBlockchainSVN\.vs\" />
+    <Folder Include="views\SynBlockchainSVN\.vs\config\" />
+    <Folder Include="views\SynBlockchainSVN\.vs\SynBlockchainSVN\" />
+    <Folder Include="views\SynBlockchainSVN\.vs\SynBlockchainSVN\v14\" />
+    <Folder Include="views\SynBlockchainSVN\css\" />
+    <Folder Include="views\SynBlockchainSVN\css\plugins\" />
+    <Folder Include="views\SynBlockchainSVN\font-awesome\" />
+    <Folder Include="views\SynBlockchainSVN\font-awesome\css\" />
+    <Folder Include="views\SynBlockchainSVN\font-awesome\fonts\" />
+    <Folder Include="views\SynBlockchainSVN\font-awesome\less\" />
+    <Folder Include="views\SynBlockchainSVN\font-awesome\scss\" />
+    <Folder Include="views\SynBlockchainSVN\fonts\" />
+    <Folder Include="views\SynBlockchainSVN\images\" />
+    <Folder Include="views\SynBlockchainSVN\js\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="typings\globals\angular-route\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\angular-ui-router\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\angular\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\debug\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\ejs-locals\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\ejs\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\express\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\inherits\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\jade\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\jquery\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\ms\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\mysql\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\node-sass\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\qs\index.d.ts" />
+    <TypeScriptCompile Include="typings\index.d.ts" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

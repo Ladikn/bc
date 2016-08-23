@@ -1,0 +1,330 @@
+<div id="outerDiv" style="margin:5px;">
+    <table id="list"></table>
+    <!--<div id="pager"></div>-->
+</div>
+
+<script src="js/jquery.modal.min.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.js"></script>
+<script src="js/jquery.jqGrid.src.js"></script>
+<script type="text/javascript">
+    $.jgrid = $.jgrid || {};
+    $.jgrid.no_legacy_api = true;
+    $.jgrid.useJSON = true;
+    (function () {
+    $(".nav").removeClass('active');
+    $("#navCat").addClass('active');
+    })();
+</script>
+
+<script type="text/javascript">
+    //<![CDATA[
+    /*global $ */
+    /*jslint browser: true */
+    $(function() {
+        "use strict";
+        var mydata = [{
+                id: "10",
+                invdate: "2007-10-01",
+                name: "test",
+                note: "note",
+                amount: "",
+                tax: "",
+                closed: true,
+                ship_via: "TN",
+                total: ""
+            }, {
+                id: "20",
+                invdate: "2007-10-02",
+                name: "test2",
+                note: "note2",
+                amount: "300.00",
+                tax: "20.00",
+                closed: false,
+                ship_via: "FE",
+                total: "320.00"
+            }, {
+                id: "30",
+                invdate: "2007-09-01",
+                name: "test3",
+                note: "note3",
+                amount: "400.00",
+                tax: "30.00",
+                closed: false,
+                ship_via: "FE",
+                total: "430.00"
+            }, {
+                id: "40",
+                invdate: "2007-10-04",
+                name: "test4 test4 test4",
+                note: "note4",
+                amount: "200.00",
+                tax: "10.00",
+                closed: true,
+                ship_via: "TN",
+                total: "210.00"
+            }, {
+                id: "50",
+                invdate: "2007-10-31",
+                name: "test5",
+                note: "note5",
+                amount: "300.00",
+                tax: "20.00",
+                closed: false,
+                ship_via: "FE",
+                total: "320.00"
+            }, {
+                id: "60",
+                invdate: "2007-09-06",
+                name: "test6",
+                note: "note6",
+                amount: "400.00",
+                tax: "30.00",
+                closed: false,
+                ship_via: "FE",
+                total: "430.00"
+            }, {
+                id: "70",
+                invdate: "2007-10-04",
+                name: "test7",
+                note: "note7",
+                amount: "200.00",
+                tax: "10.00",
+                closed: true,
+                ship_via: "TN",
+                total: "210.00"
+            }, {
+                id: "80",
+                invdate: "2007-10-03",
+                name: "test8",
+                note: "note8",
+                amount: "300.00",
+                tax: "20.00",
+                closed: false,
+                ship_via: "FE",
+                total: "320.00"
+            }, {
+                id: "90",
+                invdate: "2007-09-01",
+                name: "test9 test9 test9 test9 test9",
+                note: "note9",
+                amount: "400.00",
+                tax: "30.00",
+                closed: false,
+                ship_via: "TN",
+                total: "430.00"
+            }, {
+                id: "100",
+                invdate: "2007-09-08",
+                name: "test10",
+                note: "note10",
+                amount: "500.00",
+                tax: "30.00",
+                closed: true,
+                ship_via: "TN",
+                total: "530.00"
+            }, {
+                id: "110",
+                invdate: "2007-09-08",
+                name: "test11",
+                note: "note11",
+                amount: "500.00",
+                tax: "30.00",
+                closed: false,
+                ship_via: "FE",
+                total: "530.00"
+            }, {
+                id: "120",
+                invdate: "2007-09-10",
+                name: "test12",
+                note: "note12",
+                amount: "500.00",
+                tax: "30.00",
+                closed: false,
+                ship_via: "FE",
+                total: "530.00"
+            }],
+            $grid = $("#list"),
+            initDateEdit = function(elem) {
+                $(elem).datepicker({
+                    dateFormat: "dd-M-yy",
+                    autoSize: true,
+                    changeYear: true,
+                    changeMonth: true,
+                    showButtonPanel: true,
+                    showWeek: true
+                });
+            },
+            initDateSearch = function(elem) {
+                setTimeout(function() {
+                    $(elem).datepicker({
+                        dateFormat: "dd-M-yy",
+                        autoSize: true,
+                        changeYear: true,
+                        changeMonth: true,
+                        showWeek: true,
+                        showButtonPanel: true
+                    });
+                }, 100);
+            },
+            integerTemplate = {
+                formatter: "integer",
+                align: "right",
+                sorttype: "integer",
+                editrules: {
+                    number: true,
+                    required: true
+                },
+                searchoptions: {
+                    sopt: ["eq", "ne", "lt", "le", "gt", "ge"]
+                }
+            },
+            numberTemplate = {
+                formatter: "number",
+                align: "right",
+                sorttype: "number",
+                editrules: {
+                    number: true,
+                    required: true
+                },
+                searchoptions: {
+                    sopt: ["eq", "ne", "lt", "le", "gt", "ge"]
+                }
+            };
+
+        $grid.jqGrid({
+            data: mydata,
+            colNames: ["", "Client", "Date", "Amount", "Tax", "Total", "Closed", "Shipped via", "Notes"],
+            colModel: [{
+                name: "act",
+                template: "actions"
+            }, {
+                name: "name",
+                align: "center",
+                width: 145,
+                editrules: {
+                    required: true
+                }
+            }, {
+                name: "invdate",
+                width: 80,
+                align: "center",
+                sorttype: "date",
+                frozen: true,
+                formatter: "date",
+                formatoptions: {
+                    newformat: "d-M-Y",
+                    reformatAfterEdit: true
+                },
+                datefmt: "d-M-Y",
+                editoptions: {
+                    dataInit: initDateEdit
+                },
+                searchoptions: {
+                    sopt: ["eq", "ne", "lt", "le", "gt", "ge"],
+                    dataInit: initDateSearch
+                }
+            }, {
+                name: "amount",
+                width: 75,
+                template: "number"
+            }, {
+                name: "tax",
+                width: 52,
+                template: "number",
+                autoResizableMinColSize: 40
+            }, {
+                name: "total",
+                width: 60,
+                template: "number"
+            }, {
+                name: "closed",
+                width: 70,
+                align: "center",
+                formatter: "checkboxFontAwesome4", //formatter: "checkbox",
+                edittype: "checkbox",
+                editoptions: {
+                    value: "Yes:No",
+                    defaultValue: "Yes"
+                },
+                stype: "select",
+                searchoptions: {
+                    sopt: ["eq", "ne"],
+                    value: ":Any;true:Yes;false:No"
+                }
+            }, {
+                name: "ship_via",
+                width: 105,
+                align: "center",
+                formatter: "select",
+                edittype: "select",
+                editoptions: {
+                    value: "FE:FedEx;TN:TNT;IN:Intim",
+                    defaultValue: "IN"
+                },
+                stype: "select",
+                searchoptions: {
+                    sopt: ["eq", "ne"],
+                    value: ":Any;FE:FedEx;TN:TNT;IN:IN"
+                }
+            }, {
+                name: "note",
+                width: 60,
+                edittype: "textarea"
+            }],
+            cmTemplate: {
+                editable: true,
+                autoResizable: true
+            },
+            rowNum: 10,
+            autoResizing: {
+                compact: true
+            },
+            resizeStop: function() {
+                var newWidth = this.grid.newWidth,
+                    maxIterations = 3,
+                    i;
+                for (i = 0; i < maxIterations; i++) {
+                    // resize without shrinking
+                    $(this).jqGrid("setGridWidth", newWidth + i, false);
+                    if (this.grid.bDiv.offsetHeight <= this.grid.bDiv.clientHeight) {
+                        break;
+                    }
+                }
+            },
+            rowList: [5, 10, 20],
+            pager: true,
+            viewrecords: true,
+            toppager: false,
+            rownumbers: true,
+            sortname: "invdate",
+            sortorder: "desc",
+            autowidth: true,
+            subGridRowExpanded: function(subgridDivId, rowId) {
+                $("#" + $.jgrid.jqID(subgridDivId)).html("<em>simple subgrid data for the row with id=" + rowId + "</em>");
+            },
+            caption: "Demonstration of new navGrid"
+        });
+        $grid.jqGrid("navGrid", { //iconsOverText: true,
+                addtext: "Add",
+                edittext: "Edit",
+                deltext: "Delete",
+                searchtext: "Search",
+                refreshtext: "Reload",
+                viewtext: "View",
+                view: true,
+                cloneToTop: true /*, position: "right"*/
+            })
+            //.jqGrid("inlineNav", topPagerSelector) //"#list_toppager")
+            //.jqGrid("inlineNav", pagerSelector)
+            //$grid.jqGrid("inlineNav")
+            //.jqGrid("filterToolbar"); //.jqGrid("setFrozenColumns");
+            //$.jgrid.info_dialog($.jgrid.errors.errcap, "Test message", $.jgrid.edit.bClose);
+            //$grid.jqGrid("sortableRows");
+            //$("#outerDiv").show();
+            //$grid.jqGrid("autoResizeAllColumns");
+        $grid.jqGrid("gridResize"); // , {handles: "e, w", shrinkToFit: false}
+        //var allData = $grid.jqGrid("getRowData");
+    });
+    //]]>
+</script>
